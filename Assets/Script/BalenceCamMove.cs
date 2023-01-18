@@ -10,6 +10,7 @@ public class BalenceCamMove : MonoBehaviour
     void Start()
     {
         trans=gameObject.transform;
+        char t;
     }
 
     // Update is called once per frame

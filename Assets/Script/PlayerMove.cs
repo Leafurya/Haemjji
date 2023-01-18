@@ -16,8 +16,8 @@ public class PlayerMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float rotDeg=4f;
-        float speed=2f;
+        float rotDeg=100f*Time.deltaTime;
+        float speed=4f;
         Vector3 dir=trans.forward;
         if(Input.GetKey(KeyCode.A)){
             trans.Rotate(0,-rotDeg,0);
