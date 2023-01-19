@@ -20,6 +20,6 @@ public class CameraMove : MonoBehaviour
     {
         float mouseX = (float)Input.GetAxis("Mouse X");
         trans.Rotate(0,mouseX,0);
-        Debug.Log(mouseX);
+        //Debug.Log(mouseX);
     }
 }

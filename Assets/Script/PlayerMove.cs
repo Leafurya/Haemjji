@@ -40,6 +40,6 @@ public class PlayerMove : MonoBehaviour
         else{
             rigi.velocity=new Vector3(0,0,0);
         }
+        trans.eulerAngles=new Vector3(0f,trans.eulerAngles.y,0f);
     }
-    
 }
