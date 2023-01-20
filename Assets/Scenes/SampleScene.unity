@@ -828,6 +828,10 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
+    - target: {fileID: 216371974178703578, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 216371974178703579, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -876,6 +880,34 @@ PrefabInstance:
       propertyPath: m_Name
       value: Box
       objectReference: {fileID: 0}
+    - target: {fileID: 6764574990912153786, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
+      propertyPath: m_Axis.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6764574990912153786, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
+      propertyPath: m_Axis.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6764574990912153786, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
+      propertyPath: m_MassScale
+      value: 0.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 6764574990912153786, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
+      propertyPath: m_UseSpring
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6764574990912153786, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
+      propertyPath: m_EnableCollision
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6764574990912153786, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
+      propertyPath: m_ConnectedMassScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6764574990912153786, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
+      propertyPath: m_AutoConfigureConnectedAnchor
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8369197508643170746, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
       propertyPath: m_Damper
       value: 0
@@ -904,7 +936,8 @@ PrefabInstance:
       propertyPath: m_AutoConfigureConnectedAnchor
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9166034719701833598, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
 --- !u!1001 &515929775077779191
 PrefabInstance:

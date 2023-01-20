@@ -6,11 +6,14 @@ public class PlayerMove : MonoBehaviour
 {
     private Transform trans;
     private Rigidbody rigi;
+    public GameObject head;
+    private HeadScript hs;
     // Start is called before the first frame update
     void Start()
     {
         trans=gameObject.transform;
         rigi=gameObject.GetComponent<Rigidbody>();
+        hs=head.GetComponent<HeadScript>();
     }
 
     // Update is called once per frame
@@ -25,7 +28,10 @@ public class PlayerMove : MonoBehaviour
         else if(Input.GetKey(KeyCode.D)){
             trans.Rotate(0,rotDeg,0);
         }
-        if(Input.GetKey(KeyCode.LeftShift)){
+        if(hs.grip){
+            speed=.25f;
+        }
+        else if(Input.GetKey(KeyCode.LeftShift)){
             speed=3f;
         }
         else{
