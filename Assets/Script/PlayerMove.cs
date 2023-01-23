@@ -29,7 +29,7 @@ public class PlayerMove : MonoBehaviour
             trans.Rotate(0,rotDeg,0);
         }
         if(hs.grip){
-            speed=.25f;
+            speed=.5f;
         }
         else if(Input.GetKey(KeyCode.LeftShift)){
             speed=3f;

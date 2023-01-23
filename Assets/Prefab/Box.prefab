@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 216371974178703577}
   - component: {fileID: 216371974178703578}
   - component: {fileID: 380477528136631814}
-  - component: {fileID: 9166034719701833598}
   - component: {fileID: 6764574990912153786}
   m_Layer: 0
   m_Name: Box
@@ -129,21 +128,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2285b5f578b946543866d8f1d3b80026, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!138 &9166034719701833598
-FixedJoint:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 216371974178703580}
-  m_ConnectedBody: {fileID: 0}
-  m_ConnectedArticulationBody: {fileID: 0}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_EnableCollision: 0
-  m_EnablePreprocessing: 1
-  m_MassScale: 1
-  m_ConnectedMassScale: 1
 --- !u!59 &6764574990912153786
 HingeJoint:
   m_ObjectHideFlags: 0

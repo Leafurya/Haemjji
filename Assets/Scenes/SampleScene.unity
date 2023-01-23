@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731749, g: 0.13414757, b: 0.1210787, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -262,6 +262,11 @@ Transform:
   m_Father: {fileID: 2112737057}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &661196516 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 216371974178703580, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
+  m_PrefabInstance: {fileID: 216371976035448087}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &793286553
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,6 +684,30 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 216371974178703579, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
   m_PrefabInstance: {fileID: 216371976035448087}
   m_PrefabAsset: {fileID: 0}
+--- !u!145 &1991556563
+SpringJoint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 661196516}
+  m_ConnectedBody: {fileID: 0}
+  m_ConnectedArticulationBody: {fileID: 0}
+  m_Anchor: {x: 0, y: 0.5, z: 0}
+  m_AutoConfigureConnectedAnchor: 1
+  m_ConnectedAnchor: {x: 0, y: 0, z: 0}
+  serializedVersion: 2
+  m_Spring: 1000
+  m_Damper: 100
+  m_MinDistance: 0
+  m_MaxDistance: 0
+  m_Tolerance: 0.025
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_EnableCollision: 0
+  m_EnablePreprocessing: 1
+  m_MassScale: 1
+  m_ConnectedMassScale: 1
 --- !u!1 &2039073253
 GameObject:
   m_ObjectHideFlags: 0
@@ -825,6 +854,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2112737057}
     m_Modifications:
     - target: {fileID: 216371974178703578, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
+      propertyPath: m_AngularDrag
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 216371974178703578, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
       propertyPath: m_Constraints
       value: 126
       objectReference: {fileID: 0}
@@ -890,11 +923,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6764574990912153786, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
       propertyPath: m_MassScale
-      value: 0.00001
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6764574990912153786, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
+      propertyPath: m_UseLimits
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6764574990912153786, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
       propertyPath: m_UseSpring
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6764574990912153786, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
+      propertyPath: m_Limits.max
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6764574990912153786, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
+      propertyPath: m_Limits.min
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 6764574990912153786, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
+      propertyPath: m_BreakTorque
+      value: Infinity
+      objectReference: {fileID: 0}
+    - target: {fileID: 6764574990912153786, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
+      propertyPath: m_Spring.damper
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6764574990912153786, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
+      propertyPath: m_Spring.spring
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 6764574990912153786, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
       propertyPath: m_EnableCollision
@@ -902,7 +959,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6764574990912153786, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
       propertyPath: m_ConnectedMassScale
-      value: 1
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 6764574990912153786, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
       propertyPath: m_AutoConfigureConnectedAnchor
@@ -937,7 +994,7 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 9166034719701833598, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
+    - {fileID: 6764574990912153786, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 49198fa8814a06b4a9a37aa7a5b3f727, type: 3}
 --- !u!1001 &515929775077779191
 PrefabInstance:
@@ -1139,7 +1196,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3306311045627766341, guid: 5d85e0bd43fd670458a2075dab4637d4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 5.015
+      value: 5.099
       objectReference: {fileID: 0}
     - target: {fileID: 3306311045627766341, guid: 5d85e0bd43fd670458a2075dab4637d4, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1147,11 +1204,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3306311045627766341, guid: 5d85e0bd43fd670458a2075dab4637d4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.63056
+      value: -9.007
       objectReference: {fileID: 0}
     - target: {fileID: 3306311045627766341, guid: 5d85e0bd43fd670458a2075dab4637d4, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3306311045627766341, guid: 5d85e0bd43fd670458a2075dab4637d4, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1159,7 +1216,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3306311045627766341, guid: 5d85e0bd43fd670458a2075dab4637d4, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 3306311045627766341, guid: 5d85e0bd43fd670458a2075dab4637d4, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1171,7 +1228,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3306311045627766341, guid: 5d85e0bd43fd670458a2075dab4637d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 3306311045627766341, guid: 5d85e0bd43fd670458a2075dab4637d4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z

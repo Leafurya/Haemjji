@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class GripableObj{
     public Rigidbody rigi;
-    public HingeJoint joint;
+    public SpringJoint joint;
     public GameObject obj;
     public BoxScript bs;
 
     public GripableObj(GameObject obj){
         this.obj=obj;
         this.rigi=obj.GetComponent<Rigidbody>();
-        this.joint=obj.GetComponent<HingeJoint>();
+        this.joint=obj.GetComponent<SpringJoint>();
         this.bs=obj.GetComponent<BoxScript>();
     }
 }
@@ -38,6 +38,8 @@ public class HeadScript : MonoBehaviour
         //Debug.Log(clashed);
         if(Input.GetKeyDown(KeyCode.Space)&&clashed){
             grip=true;
+            Vector3 tvec=trans.TransformPoint(trans.localPosition);
+            gripableObj.joint.anchor=gripableObj.bs.GetAnchorPosition(tvec);
 			gripableObj.joint.connectedBody=rigi;
 			gripableObj.rigi.constraints=RigidbodyConstraints.None;
         }
@@ -47,13 +49,12 @@ public class HeadScript : MonoBehaviour
 			gripableObj.rigi.constraints=RigidbodyConstraints.FreezeAll;
         }
         if(grip){
-			Vector3 tvec=trans.TransformPoint(trans.localPosition);
-            gripableObj.joint.anchor=gripableObj.bs.GetAnchorPosition(tvec);
+			// Vector3 tvec=trans.TransformPoint(trans.localPosition);
+            // gripableObj.joint.anchor=gripableObj.bs.GetAnchorPosition(tvec);
             //gripableObj.joint.connectedAnchor=tvec;
-			Debug.Log(tvec);
+			//Debug.Log(tvec);
         }
         else{
-            
         }
         // if(clashed){
         //     if(Input.GetKeyDown(KeyCode.Space)){
@@ -130,7 +131,7 @@ public class HeadScript : MonoBehaviour
         Debug.Log("stay");
         if(coll.CompareTag("moveable")){
             GameObject box=coll.gameObject;
-            HingeJoint boxJoint=box.GetComponent<HingeJoint>();
+            SpringJoint boxJoint=box.GetComponent<SpringJoint>();
             Rigidbody boxRigi=box.GetComponent<Rigidbody>();
             if(Input.GetKey(KeyCode.R)){
                 //boxJoint.connectedBody=rigi;
