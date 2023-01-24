@@ -17,11 +17,11 @@ public class GripableObj{
 }
 public class HeadScript : MonoBehaviour
 {
-    
     private Rigidbody rigi;
     public bool clashed,grip;
     public GripableObj gripableObj;
     private Transform trans;
+    public InventoryScript invns;
     // Start is called before the first frame update
     void Start()
     {
@@ -70,7 +70,8 @@ public class HeadScript : MonoBehaviour
                 clashed=true;
                 break;
             case "item":
-                
+                Debug.Log(coll.gameObject);
+                invns.StoreItem(coll.gameObject);
                 break;
         }
     }

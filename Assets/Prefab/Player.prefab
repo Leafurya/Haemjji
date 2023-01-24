@@ -123,7 +123,6 @@ GameObject:
   - component: {fileID: 3306311045627766341}
   - component: {fileID: 3306311045627766336}
   - component: {fileID: 3306311045627766337}
-  - component: {fileID: 9006177689375068747}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -177,18 +176,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 68
   m_CollisionDetection: 0
---- !u!114 &9006177689375068747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3306311045627766340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 78bd57a1106ea8443a9279433de6bb3d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &3306311046028785041
 GameObject:
   m_ObjectHideFlags: 0
@@ -203,6 +190,7 @@ GameObject:
   - component: {fileID: 3306311046028785036}
   - component: {fileID: 3306311046028785043}
   - component: {fileID: 3306311046028785039}
+  - component: {fileID: 8078505290931826047}
   m_Layer: 0
   m_Name: Mouse
   m_TagString: Player
@@ -318,3 +306,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   clashed: 0
   grip: 0
+  invns: {fileID: 8078505290931826047}
+--- !u!114 &8078505290931826047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3306311046028785041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78bd57a1106ea8443a9279433de6bb3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inven: []
