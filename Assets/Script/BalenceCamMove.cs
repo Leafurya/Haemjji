@@ -15,6 +15,6 @@ public class BalenceCamMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        trans.position=new Vector3(-mainCam.transform.position.x,mainCam.transform.position.y,-mainCam.transform.position.z);
+        trans.position=new Vector3(-mainCam.transform.localPosition.x,mainCam.transform.localPosition.y,-mainCam.transform.localPosition.z);
     }
 }
